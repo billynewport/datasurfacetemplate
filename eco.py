@@ -3,5 +3,5 @@ from datasurface.md.GitOps import GitHubRepository
 
 
 def createEcosystem() -> Ecosystem:
-    return Ecosystem("test", GitHubRepository("billynewport/datasurfacetemplate", "main")
+    return Ecosystem("Test", GitHubRepository("billynewport/datasurfacetemplate", "main")
                      )
