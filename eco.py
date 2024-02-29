@@ -9,14 +9,14 @@ from datasurface.md.Governance import CloudVendor, DefaultDataPlatform, Ecosyste
 
 def createEcosystem() -> Ecosystem:
     e: Ecosystem = Ecosystem(
-        "Test", GitHubRepository("billynewport/test_step1", "main"),
+        "Test", GitHubRepository("billynewport/datasurfacetemplate", "main"),
         DefaultDataPlatform(AzureDataplatform("Azure Platform", PlainTextDocumentation("Test"),
                             AzureKeyVaultCredential("vault", "maincred"))),
         AmazonAWSDataPlatform("AWS Platform", PlainTextDocumentation("Test")),
 
-        GovernanceZoneDeclaration("USA", GitHubRepository("billynewport/test_step1", "USAmain")),
-        GovernanceZoneDeclaration("EU", GitHubRepository("billynewport/test_step1", "EUmain")),
-        GovernanceZoneDeclaration("UK", GitHubRepository("billynewport/test_step1", "UKmain")),
+        GovernanceZoneDeclaration("USA", GitHubRepository("billynewport/datasurfacetemplate", "USAmain")),
+        GovernanceZoneDeclaration("EU", GitHubRepository("billynewport/datasurfacetemplate", "EUmain")),
+        GovernanceZoneDeclaration("UK", GitHubRepository("billynewport/datasurfacetemplate", "UKmain")),
 
         # Infra Vendors and locations
         InfrastructureVendor(
