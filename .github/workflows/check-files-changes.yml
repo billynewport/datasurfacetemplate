@@ -16,8 +16,8 @@ jobs:
       run: |
         changed_files=$(git diff --name-only HEAD^ HEAD)
         for file in $changed_files; do
-            if [[ ! $file =~ .*\.py$ ]]; then  # Any python file in any directory is allowed
-                echo "Error: $file cannot be changed. Only python files are allowed."
-                exit 1
-            fi
+          if [[ ! $file =~ .*\.py$ ]] && [[ ! $file =~ .*\.md$ ]] && [[ ! $file == .gitignore ]]; then
+            echo "Error: $file cannot be changed. Only python files, markdown files, and .gitignore are allowed."
+            exit 1
+          fi
         done
