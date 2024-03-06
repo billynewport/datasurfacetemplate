@@ -1,4 +1,4 @@
-name: Pull Request Check
+name: DataSurface Model Validator
 
 on:
   pull_request:
